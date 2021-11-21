@@ -6,7 +6,7 @@ namespace BookClub
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            BookClubApplication app = new BookClubApplication("./BookClub/Resources/");
         }
     }
 }

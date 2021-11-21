@@ -1,0 +1,16 @@
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\bin\Debug\net5.0\BookClub.exe
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\bin\Debug\net5.0\BookClub.deps.json
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\bin\Debug\net5.0\BookClub.runtimeconfig.json
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\bin\Debug\net5.0\BookClub.runtimeconfig.dev.json
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\bin\Debug\net5.0\BookClub.dll
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\bin\Debug\net5.0\ref\BookClub.dll
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\bin\Debug\net5.0\BookClub.pdb
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\obj\Debug\net5.0\BookClub.csproj.AssemblyReference.cache
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\obj\Debug\net5.0\BookClub.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\obj\Debug\net5.0\BookClub.AssemblyInfoInputs.cache
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\obj\Debug\net5.0\BookClub.AssemblyInfo.cs
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\obj\Debug\net5.0\BookClub.csproj.CoreCompileInputs.cache
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\obj\Debug\net5.0\BookClub.dll
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\obj\Debug\net5.0\ref\BookClub.dll
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\obj\Debug\net5.0\BookClub.pdb
+C:\Users\sosol\Documents\school\fifthsem\programming\linq\assignment3_1934115\BookClubApplication\BookClub\obj\Debug\net5.0\BookClub.genruntimeconfig.cache
