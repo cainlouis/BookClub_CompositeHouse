@@ -17,7 +17,7 @@ namespace CompositeHouse
         /// <summary>
         /// This method returns total square footage of an IHousePart
         /// </summary>
-        public virtual int CalculateSize()
+        public new int CalculateSize()
         {
             return base.SquareFootage;
         }
