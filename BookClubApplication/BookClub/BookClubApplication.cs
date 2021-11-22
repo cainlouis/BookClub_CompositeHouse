@@ -139,11 +139,14 @@ namespace BookClub
         /// </summary>
         private void printTopRatedBooks()
         {
-            var mostReadBook = bookList.OrderByDescending(b => b.NumReader).Select(b => new { b.Title, b.Rating, b.NumReader }).Take(10);
+            //Get the 10 most reviewed books
+            var mostReadBook = bookList.OrderByDescending(b => b.NumReader).Select(b => new { b.Title, b.Rating }).Take(10);
+            //Get the 5 most well rated book frok the 10 most reviewed books
             var topBooks = mostReadBook.OrderByDescending(b => b.Rating).Select(b => b.Title).Take(5);
             Console.WriteLine("**************************************");
             Console.WriteLine("*********  Top Rated books  **********");
             int count = 1;
+            //for every title in the topBooks
             foreach (var b in topBooks)
             {
                 Console.WriteLine("**************************************");
@@ -153,8 +156,13 @@ namespace BookClub
             Console.WriteLine("**************************************");
         }
 
+        /// <summary>
+        /// Print the Genres and the books in each
+        /// </summary>
         private void printByGenre()
         {
+            //get all the books grouped by genre, sorted first by the sum of 
+            //NumReaders in descending order and then by average rating in descending order
             var bookByGenre = from book in bookList
                               group book by book.Genre into bookGenre
                               orderby bookGenre.Sum(b => b.NumReader) descending, bookGenre.Average(b => b.Rating) descending
@@ -162,32 +170,41 @@ namespace BookClub
 
             Console.WriteLine("*************************************************");
             Console.WriteLine("***************  Books by Genre  ****************");
+            //for every genre 
             foreach (var genre in bookByGenre)
             {
+                //Display the genre
                 Console.WriteLine("*************************************************");
                 Console.WriteLine("Book Genre: " + genre.Key);
                 int count = 1;
+                //Then display the books in the genre
                 foreach (var book in genre)
                 {
                     Console.WriteLine($"Book {count}: {book.Title}");
                     count++;
                 }
+                //Display the number of book in that genre and the average rating
                 Console.WriteLine($"Number of books: {genre.ToList().Count}");
                 Console.WriteLine($"Average Rating: {Math.Round(genre.Average(e => e.Rating), 2)}");
                 Console.WriteLine("*************************************************");
             }
         }
 
+        /// <summary>
+        /// Print all the books containing the word entered by the user
+        /// </summary>
         private void printByKeyword()
         {
+            //Prompt the user to enter the keyword
             Console.WriteLine("*******************************************");
             Console.Write("Enter a keyword : ");
             string keyword = Console.ReadLine().ToLower();
             Console.WriteLine("*******************************************");
-
+            //get the books containing the keyword in the title or the description
             var keywordRelated = bookList.Where(b => b.Title.ToLower().Contains(keyword) || b.Description.ToLower().Contains(keyword)).Select(b => b.Title);
             Console.WriteLine("*********  Keyword related book  **********");
             int count = 1;
+            //Print every book selected
             foreach (var book in keywordRelated)
             {
                 Console.WriteLine("*******************************************");
@@ -195,6 +212,14 @@ namespace BookClub
                 count++;
             }
             Console.WriteLine("*******************************************");
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void printSurpriseMe()
+        {
+            //
         }
     }
 }
