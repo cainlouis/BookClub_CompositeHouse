@@ -216,10 +216,11 @@ namespace BookClub
         }
 
         /// <summary>
-        /// 
+        /// Print the genre starting by the least read.
         /// </summary>
         private void printSurpriseMe()
         {
+            //Select the genre by the number of reader in this genre starting by the least read 
             var leastReadBookGenre = from book in bookList
                               group book by book.Genre into bookGenre
                               orderby bookGenre.Sum(b => b.NumReader) ascending
@@ -227,7 +228,9 @@ namespace BookClub
             
             Console.WriteLine("*************************************************");
             Console.WriteLine("************  Least visited Genre  **************");
+            //For each genre 
             foreach (var genre in leastReadBookGenre) {
+                //Print the name of the genre
                 Console.WriteLine("*************************************************");
                 Console.WriteLine("Book Genre: " + genre.Key);
                 int count = 1;
@@ -237,6 +240,7 @@ namespace BookClub
                     Console.WriteLine($"Book {count}: {book.Title}");
                     count++;
                 }
+                //Print the number of reader in this genre
                 Console.WriteLine($"Number of readers for this genre: {genre.Sum(b => b.NumReader)}");
                 Console.WriteLine("*************************************************");
             }
