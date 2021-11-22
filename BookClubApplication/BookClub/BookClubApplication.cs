@@ -82,19 +82,21 @@ namespace BookClub
                 bookList.Add(book);
             }
 
-            // foreach (Book book in bookList)
-            // {
-            //     Console.WriteLine(book.ToString());
-            // }
         }
 
+        /// <summary>
+        /// This method prompt the user and call a method accordingly to their choice
+        /// </summary>
         public void Run()
         {
             int choice;
             Console.WriteLine("Welcome to the Book Appreciation Club!");
+            //do until the user choose to quit
             do
             {
+                //Get the user input
                 bool success = Int32.TryParse(Menu(), out choice);
+                //Depending to the user choice call method
                 switch (choice)
                 {
                     case 1:
@@ -111,11 +113,14 @@ namespace BookClub
                         break;
                     case 5:
                         break;
+                    //if the user enter something else than a number or a number that is not among the choice
                     default:
+                        //print message 
                         Console.WriteLine("=> The number entered is not part of the options. Please choose between 1 and 5 inclusively.");
                         break;
                 }
             } while (choice != 5);
+            //Goodbye message on quit
             Console.WriteLine("You have chosen to quit the application, have a nice day!");
         }
 
@@ -222,14 +227,15 @@ namespace BookClub
         {
             //Select the genre by the number of reader in this genre starting by the least read 
             var leastReadBookGenre = from book in bookList
-                              group book by book.Genre into bookGenre
-                              orderby bookGenre.Sum(b => b.NumReader) ascending
-                              select bookGenre;
-            
+                                     group book by book.Genre into bookGenre
+                                     orderby bookGenre.Sum(b => b.NumReader) ascending
+                                     select bookGenre;
+
             Console.WriteLine("*************************************************");
             Console.WriteLine("************  Least visited Genre  **************");
             //For each genre 
-            foreach (var genre in leastReadBookGenre) {
+            foreach (var genre in leastReadBookGenre)
+            {
                 //Print the name of the genre
                 Console.WriteLine("*************************************************");
                 Console.WriteLine("Book Genre: " + genre.Key);
