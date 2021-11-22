@@ -12,6 +12,20 @@ namespace CompositeHouse
         /// </value>
         private List<IHousePart> houseParts;
 
+        /// <value>
+        /// Property
+        /// <c> Name </c>
+        /// Represents the name of the part created
+        /// </value>
+        public virtual string Name { get; }
+
+        /// <value>
+        /// Property
+        /// <c> SquareFootage </c>
+        /// Represents the square foot of the part
+        /// </value>
+        public virtual int SquaredFootage { get; }
+
         /// <summary>
         /// Parameterized constructor that initialize the fields
         /// </summary>
@@ -19,8 +33,8 @@ namespace CompositeHouse
         /// <param name="squaredFootage"> the size of the part </param>
         public CompositeHousePart(string name, int squaredFootage)
         {
-            base.Name = name;
-            base.SquaredFootage = squaredFootage;
+            Name = name;
+            SquaredFootage = squaredFootage;
             houseParts = new List<IHousePart>();
         }
 
@@ -37,9 +51,9 @@ namespace CompositeHouse
         /// Calculate the size of all house parts
         /// </summary>
         ///<return> The sum of all the squaredFootage of all the houseParts </return> 
-        public new int CalculateSize()
+        public virtual int CalculateSize()
         {
-            int totalSquaredFootage = base.CalculateSize();
+            int totalSquaredFootage = SquaredFootage;
             foreach (IHousePart housePart in houseParts)
             {
                 totalSquaredFootage += housePart.CalculateSize();

@@ -2,7 +2,7 @@ using System;
 
 namespace CompositeHouse
 {
-    interface IHousePart
+    public interface IHousePart
     {
         /// <value>
         /// Property
@@ -16,14 +16,14 @@ namespace CompositeHouse
         /// <c> SquareFootage </c>
         /// Represents the square foot of the part
         /// </value>
-        int SquareFootage { get; }
+        int SquaredFootage { get; }
 
         /// <summary>
         /// This method returns total square footage of an IHousePart
         /// </summary>
-        virtual int CalculateSize()
+        int CalculateSize()
         {
-            return SquareFootage;
+            return SquaredFootage;
         }
     }
 }

@@ -1,0 +1,16 @@
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\obj\Debug\net5.0\CompositeHouse.csproj.AssemblyReference.cache
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\obj\Debug\net5.0\CompositeHouse.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\obj\Debug\net5.0\CompositeHouse.AssemblyInfoInputs.cache
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\obj\Debug\net5.0\CompositeHouse.AssemblyInfo.cs
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\obj\Debug\net5.0\CompositeHouse.csproj.CoreCompileInputs.cache
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\bin\Debug\net5.0\CompositeHouse.exe
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\bin\Debug\net5.0\CompositeHouse.deps.json
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\bin\Debug\net5.0\CompositeHouse.runtimeconfig.json
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\bin\Debug\net5.0\CompositeHouse.runtimeconfig.dev.json
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\bin\Debug\net5.0\CompositeHouse.dll
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\bin\Debug\net5.0\ref\CompositeHouse.dll
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\bin\Debug\net5.0\CompositeHouse.pdb
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\obj\Debug\net5.0\CompositeHouse.dll
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\obj\Debug\net5.0\ref\CompositeHouse.dll
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\obj\Debug\net5.0\CompositeHouse.pdb
+C:\Users\sosol\Documents\school\programming\assignments\assignment3_1934115\CompositeHouseApplication\CompositeHouse\obj\Debug\net5.0\CompositeHouse.genruntimeconfig.cache

@@ -3,6 +3,20 @@ namespace CompositeHouse
 {
     public class SimpleHousePart : IHousePart
     {
+        /// <value>
+        /// Property
+        /// <c> Name </c>
+        /// Represents the name of the part created
+        /// </value>
+        public virtual string Name { get; }
+
+        /// <value>
+        /// Property
+        /// <c> SquareFootage </c>
+        /// Represents the square foot of the part
+        /// </value>
+        public virtual int SquaredFootage { get; }
+
         /// <summary>
         /// Parameterized constructor that initialize the field
         /// </summary>
@@ -10,16 +24,16 @@ namespace CompositeHouse
         /// <param name="squaredFootage"> the size of the part </param>
         public SimpleHousePart(string name, int squareFootage)
         {
-            base.Name = name;
-            base.SquareFootage = squareFootage;
+            Name = name;
+            SquaredFootage = squareFootage;
         }
 
         /// <summary>
         /// This method returns total square footage of an IHousePart
         /// </summary>
-        public new int CalculateSize()
+        public virtual int CalculateSize()
         {
-            return base.SquareFootage;
+            return SquaredFootage;
         }
     }
 }

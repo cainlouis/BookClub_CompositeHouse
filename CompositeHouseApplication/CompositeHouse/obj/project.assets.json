@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sosol\\Documents\\school\\fifthsem\\programming\\linq\\assignment3_1934115\\CompositeHouseApplication\\CompositeHouse\\CompositeHouse.csproj",
+      "projectUniqueName": "C:\\Users\\sosol\\Documents\\school\\programming\\assignments\\assignment3_1934115\\CompositeHouseApplication\\CompositeHouse\\CompositeHouse.csproj",
       "projectName": "CompositeHouse",
-      "projectPath": "C:\\Users\\sosol\\Documents\\school\\fifthsem\\programming\\linq\\assignment3_1934115\\CompositeHouseApplication\\CompositeHouse\\CompositeHouse.csproj",
+      "projectPath": "C:\\Users\\sosol\\Documents\\school\\programming\\assignments\\assignment3_1934115\\CompositeHouseApplication\\CompositeHouse\\CompositeHouse.csproj",
       "packagesPath": "C:\\Users\\sosol\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sosol\\Documents\\school\\fifthsem\\programming\\linq\\assignment3_1934115\\CompositeHouseApplication\\CompositeHouse\\obj\\",
+      "outputPath": "C:\\Users\\sosol\\Documents\\school\\programming\\assignments\\assignment3_1934115\\CompositeHouseApplication\\CompositeHouse\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sosol\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
