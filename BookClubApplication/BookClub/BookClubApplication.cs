@@ -94,7 +94,7 @@ namespace BookClub
             Console.WriteLine("Welcome to the Book Appreciation Club!");
             do
             {
-                choice = Int32.Parse(Menu());
+                bool success = Int32.TryParse(Menu(), out choice);
                 switch (choice)
                 {
                     case 1:
@@ -111,7 +111,7 @@ namespace BookClub
                     case 5:
                         break;
                     default:
-                        Console.WriteLine("The number entered is not part of the options. Please choose between 1 and 5 inclusively.");
+                        Console.WriteLine("=> The number entered is not part of the options. Please choose between 1 and 5 inclusively.");
                         break;
                 }
             } while (choice != 5);
