@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sosol\\Documents\\school\\fifthsem\\programming\\linq\\assignment3_1934115\\BookClubApplication\\BookClub\\BookClub.csproj": {}
+    "C:\\Users\\sosol\\Documents\\school\\programming\\assignments\\assignment3_1934115\\BookClubApplication\\BookClub\\BookClub.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sosol\\Documents\\school\\fifthsem\\programming\\linq\\assignment3_1934115\\BookClubApplication\\BookClub\\BookClub.csproj": {
+    "C:\\Users\\sosol\\Documents\\school\\programming\\assignments\\assignment3_1934115\\BookClubApplication\\BookClub\\BookClub.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sosol\\Documents\\school\\fifthsem\\programming\\linq\\assignment3_1934115\\BookClubApplication\\BookClub\\BookClub.csproj",
+        "projectUniqueName": "C:\\Users\\sosol\\Documents\\school\\programming\\assignments\\assignment3_1934115\\BookClubApplication\\BookClub\\BookClub.csproj",
         "projectName": "BookClub",
-        "projectPath": "C:\\Users\\sosol\\Documents\\school\\fifthsem\\programming\\linq\\assignment3_1934115\\BookClubApplication\\BookClub\\BookClub.csproj",
+        "projectPath": "C:\\Users\\sosol\\Documents\\school\\programming\\assignments\\assignment3_1934115\\BookClubApplication\\BookClub\\BookClub.csproj",
         "packagesPath": "C:\\Users\\sosol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sosol\\Documents\\school\\fifthsem\\programming\\linq\\assignment3_1934115\\BookClubApplication\\BookClub\\obj\\",
+        "outputPath": "C:\\Users\\sosol\\Documents\\school\\programming\\assignments\\assignment3_1934115\\BookClubApplication\\BookClub\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sosol\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

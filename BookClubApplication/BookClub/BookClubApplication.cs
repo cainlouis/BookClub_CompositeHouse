@@ -107,6 +107,7 @@ namespace BookClub
                         printByKeyword();
                         break;
                     case 4:
+                        printSurpriseMe();
                         break;
                     case 5:
                         break;
@@ -141,19 +142,19 @@ namespace BookClub
         {
             //Get the 10 most reviewed books
             var mostReadBook = bookList.OrderByDescending(b => b.NumReader).Select(b => new { b.Title, b.Rating }).Take(10);
-            //Get the 5 most well rated book frok the 10 most reviewed books
+            //Get the 5 most well rated book from the 10 most reviewed books
             var topBooks = mostReadBook.OrderByDescending(b => b.Rating).Select(b => b.Title).Take(5);
-            Console.WriteLine("**************************************");
-            Console.WriteLine("*********  Top Rated books  **********");
+            Console.WriteLine("*************************************************");
+            Console.WriteLine("***************  Top Rated books  ***************");
             int count = 1;
             //for every title in the topBooks
             foreach (var b in topBooks)
             {
-                Console.WriteLine("**************************************");
+                Console.WriteLine("*************************************************");
                 Console.WriteLine(count + ". " + b);
                 count++;
             }
-            Console.WriteLine("**************************************");
+            Console.WriteLine("*************************************************");
         }
 
         /// <summary>
@@ -196,22 +197,22 @@ namespace BookClub
         private void printByKeyword()
         {
             //Prompt the user to enter the keyword
-            Console.WriteLine("*******************************************");
+            Console.WriteLine("*************************************************");
             Console.Write("Enter a keyword : ");
             string keyword = Console.ReadLine().ToLower();
-            Console.WriteLine("*******************************************");
+            Console.WriteLine("*************************************************");
             //get the books containing the keyword in the title or the description
             var keywordRelated = bookList.Where(b => b.Title.ToLower().Contains(keyword) || b.Description.ToLower().Contains(keyword)).Select(b => b.Title);
-            Console.WriteLine("*********  Keyword related book  **********");
+            Console.WriteLine("************  Keyword related book  *************");
             int count = 1;
             //Print every book selected
             foreach (var book in keywordRelated)
             {
-                Console.WriteLine("*******************************************");
+                Console.WriteLine("*************************************************");
                 Console.WriteLine($"{count}. {book}");
                 count++;
             }
-            Console.WriteLine("*******************************************");
+            Console.WriteLine("*************************************************");
         }
 
         /// <summary>
@@ -219,7 +220,26 @@ namespace BookClub
         /// </summary>
         private void printSurpriseMe()
         {
-            //
+            var leastReadBookGenre = from book in bookList
+                              group book by book.Genre into bookGenre
+                              orderby bookGenre.Sum(b => b.NumReader) ascending
+                              select bookGenre;
+            
+            Console.WriteLine("*************************************************");
+            Console.WriteLine("************  Least visited Genre  **************");
+            foreach (var genre in leastReadBookGenre) {
+                Console.WriteLine("*************************************************");
+                Console.WriteLine("Book Genre: " + genre.Key);
+                int count = 1;
+                //Then display the books in the genre
+                foreach (var book in genre)
+                {
+                    Console.WriteLine($"Book {count}: {book.Title}");
+                    count++;
+                }
+                Console.WriteLine($"Number of readers for this genre: {genre.Sum(b => b.NumReader)}");
+                Console.WriteLine("*************************************************");
+            }
         }
     }
 }
