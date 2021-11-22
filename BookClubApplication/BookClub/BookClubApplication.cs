@@ -81,11 +81,120 @@ namespace BookClub
                 Book book = new Book(Int32.Parse(item.BookId), item.Title, item.Description, item.Genre, item.AuthorLastName, item.AuthorFirstName, Math.Round(item.AvgRating, 2), item.NumReaders);
                 bookList.Add(book);
             }
+
+            // foreach (Book book in bookList)
+            // {
+            //     Console.WriteLine(book.ToString());
+            // }
         }
 
         public void Run()
         {
+            int choice;
+            Console.WriteLine("Welcome to the Book Appreciation Club!");
+            do
+            {
+                choice = Int32.Parse(Menu());
+                switch (choice)
+                {
+                    case 1:
+                        printTopRatedBooks();
+                        break;
+                    case 2:
+                        printByGenre();
+                        break;
+                    case 3:
+                        printByKeyword();
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    default:
+                        Console.WriteLine("The number entered is not part of the options. Please choose between 1 and 5 inclusively.");
+                        break;
+                }
+            } while (choice != 5);
+            Console.WriteLine("You have chosen to quit the application, have a nice day!");
+        }
 
+        /// <summary>
+        /// This method print the menu and 
+        /// </summary>
+        /// <returns> A string that represents the user choice </returns>
+        private string Menu()
+        {
+            Console.WriteLine("Enter the number of your option of choice!");
+            Console.WriteLine("1. View the 5 top-rated books.");
+            Console.WriteLine("2. Browse books by popular genre.");
+            Console.WriteLine("3. Search for a book by keywords.");
+            Console.WriteLine("4. Surprise Me!");
+            Console.WriteLine("5. Quit.");
+            string choice = Console.ReadLine();
+            return choice;
+        }
+
+        /// <summary>
+        /// This method Print the 5 most rated book with the highest number of readers
+        /// </summary>
+        private void printTopRatedBooks()
+        {
+            var mostReadBook = bookList.OrderByDescending(b => b.NumReader).Select(b => new { b.Title, b.Rating, b.NumReader }).Take(10);
+            var topBooks = mostReadBook.OrderByDescending(b => b.Rating).Select(b => b.Title).Take(5);
+            Console.WriteLine("**************************************");
+            Console.WriteLine("*********  Top Rated books  **********");
+            int count = 1;
+            foreach (var b in topBooks)
+            {
+                Console.WriteLine("**************************************");
+                Console.WriteLine(count + ". " + b);
+                count++;
+            }
+            Console.WriteLine("**************************************");
+        }
+
+        private void printByGenre()
+        {
+            var bookByGenre = from book in bookList
+                              group book by book.Genre into bookGenre
+                              orderby bookGenre.Sum(b => b.NumReader) descending, bookGenre.Average(b => b.Rating) descending
+                              select bookGenre;
+
+            Console.WriteLine("*************************************************");
+            Console.WriteLine("***************  Books by Genre  ****************");
+            foreach (var genre in bookByGenre)
+            {
+                Console.WriteLine("*************************************************");
+                Console.WriteLine("Book Genre: " + genre.Key);
+                int count = 1;
+                foreach (var book in genre)
+                {
+                    Console.WriteLine($"Book {count}: {book.Title}");
+                    count++;
+                }
+                Console.WriteLine($"Number of books: {genre.ToList().Count}");
+                Console.WriteLine($"Average Rating: {Math.Round(genre.Average(e => e.Rating), 2)}");
+                Console.WriteLine("*************************************************");
+            }
+        }
+
+        private void printByKeyword()
+        {
+            Console.WriteLine("*******************************************");
+            Console.Write("Enter a keyword : ");
+            string keyword = Console.ReadLine().ToLower();
+            Console.WriteLine("*******************************************");
+
+            var keywordRelated = bookList.Where(b => b.Title.ToLower().Contains(keyword) || b.Description.ToLower().Contains(keyword)).Select(b => b.Title);
+            Console.WriteLine("*********  Keyword related book  **********");
+            int count = 1;
+            foreach (var book in keywordRelated)
+            {
+                Console.WriteLine("*******************************************");
+                Console.WriteLine($"{count}. {book}");
+                count++;
+            }
+            Console.WriteLine("*******************************************");
         }
     }
 }
