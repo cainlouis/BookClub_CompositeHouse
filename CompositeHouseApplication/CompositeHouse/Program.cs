@@ -6,7 +6,6 @@ namespace CompositeHouse
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             //Create the composite part door
             CompositeHousePart door = new CompositeHousePart("door", 25);
             //Add knob to the door
