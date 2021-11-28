@@ -59,28 +59,24 @@ namespace BookClub
                             NumReaders = rating.Elements("rating").Count()
                         });
 
-            //Join these two collections on the BookID value
+            //Join these two collections on the BookID value and create the book objects
             var joined = ratings.Join(books,
                         r => r.BookId,
                         b => b.BookId,
-                        (r, b) => new
+                        (r, b) => new Book()
                         {
-                            b.BookId,
-                            b.Title,
-                            b.Description,
-                            b.Genre,
-                            b.AuthorLastName,
-                            b.AuthorFirstName,
-                            r.AvgRating,
-                            r.NumReaders
+                            BookId = Int32.Parse(b.BookId),
+                            Title = b.Title,
+                            Description = b.Description,
+                            Genre = b.Genre,
+                            AuthorLastName = b.AuthorLastName,
+                            AuthorFirstName = b.AuthorFirstName,
+                            Rating = r.AvgRating,
+                            NumReader = r.NumReaders
                         });
 
             //populate the List<Book> field by creating Book objects from the collection of anonymous objects
-            foreach (var item in joined)
-            {
-                Book book = new Book(Int32.Parse(item.BookId), item.Title, item.Description, item.Genre, item.AuthorLastName, item.AuthorFirstName, Math.Round(item.AvgRating, 2), item.NumReaders);
-                bookList.Add(book);
-            }
+            bookList = (from b in joined select b).ToList();
 
         }
 

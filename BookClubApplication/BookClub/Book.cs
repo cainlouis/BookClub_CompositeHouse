@@ -9,68 +9,56 @@ namespace BookClub
         /// <c> BookId </c>
         /// Serves as the holder of the unique identifier for each books
         /// </value>
-        public int BookId { get; }
+        public int BookId { get; set; }
 
         /// <value>
         /// Property
         /// <c> Title </c>
         /// Serves as the holder of the title of the book
         /// </value>
-        public string Title { get; }
+        public string Title { get; set; }
 
         /// <value>
         /// Property
         /// <c> Description </c>
         /// Serves as the holder of the description of the book
         /// </value>
-        public string Description { get; }
+        public string Description { get; set; }
 
         /// <value>
         /// Property
         /// <c> Genre </c>
         /// Serves as the holder of the genre of the book
         /// </value>
-        public string Genre { get; }
+        public string Genre { get; set; }
 
         /// <value>
         /// Property
         /// <c> AuthorLastName </c>
         /// Serves as the holder of the holder of the book author's last name
         /// </value>
-        public string AuthorLastName { get; }
+        public string AuthorLastName { get; set; }
 
         /// <value>
         /// Property
         /// <c> AuthorFirstName </c>
         /// Serves as the holder of the book author's first name
         /// </value>
-        public string AuthorFirstName { get; }
+        public string AuthorFirstName { get; set; }
 
         /// <value>
         /// Property
         /// <c> Rating </c>
         /// Serves as the holder of the book's rating 
         /// </value>
-        public double Rating { get; }
+        public double Rating { get; set; }
 
         /// <value>
         /// Property
         /// <c> NumReader </c>
         /// Serves as the holder of the book's number of readers
         /// </value>
-        public int NumReader { get; }
-
-        public Book(int bookId, string title, string description, string genre, string authorLastName, string authorFirstName, double rating, int numReader)
-        {
-            BookId = bookId;
-            Title = title;
-            Description = description;
-            Genre = genre;
-            AuthorLastName = authorLastName;
-            AuthorFirstName = authorFirstName;
-            Rating = rating;
-            NumReader = numReader;
-        }
+        public int NumReader { get; set; }
 
         /// <summary>
         /// Creates a descriptive string for the book object
