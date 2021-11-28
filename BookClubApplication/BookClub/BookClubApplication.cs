@@ -222,10 +222,10 @@ namespace BookClub
         private void printSurpriseMe()
         {
             //Select the genre by the number of reader in this genre starting by the least read 
-            var leastReadBookGenre = from book in bookList
-                                     group book by book.Genre into bookGenre
-                                     orderby bookGenre.Sum(b => b.NumReader) ascending
-                                     select bookGenre;
+            var leastReadBookGenre = (from book in bookList
+                                      group book by book.Genre into bookGenre
+                                      orderby bookGenre.Sum(b => b.NumReader) ascending
+                                      select bookGenre).Take(1);
 
             Console.WriteLine("*************************************************");
             Console.WriteLine("************  Least visited Genre  **************");
